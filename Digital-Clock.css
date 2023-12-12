@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color:darkblue;
+}
+.clock-container{
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.time{
+    font-family: monospace;
+    color:darkblue;
+    background-color:aquamarine;
+    font-size: 3rem;
+    font-family: 'Arial', sans-serif;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.title{
+    display: flex;
+    position: fixed;
+    top:0;
+    left: 0;
+    color: aquamarine;
+    font-family: 'Courier New', Courier, monospace;
+}

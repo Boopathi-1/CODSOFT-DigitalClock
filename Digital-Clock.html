@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="Digital-Clock.css">
+</head>
+<body>
+    <p class="title">Digital Clock by Mahesh Boopathi</p>
+    <div class="clock-container">
+        <div id="time" class="time">
+
+        </div>
+
+    </div>
+    <script>
+        //this is my javascript code for time using javascript methods Iam using javascript methods for that
+        function updateTime() {
+            const time= new Date();
+            const hours=time.getHours();
+            const minutes=time.getMinutes();
+            const seconds=time.getSeconds();
+            //adding zero before single digit hours minutes and seconds -Mahesh Boopathi
+            const correctedHours=hours < 10 ? '0' + hours : hours;
+            const correctedMinutes=minutes < 10 ? '0' + minutes : minutes;
+            const correctedSeconds=seconds < 10 ? '0' + seconds : seconds;
+            //in the below code I am concatenating all the value together
+            const correctedTime=`${correctedHours}:${correctedMinutes}:${correctedSeconds}`;
+            
+
+            document.getElementById("time").innerHTML=correctedTime;
+
+
+}
+//this is for updating time every second
+setInterval(updateTime, 1000);
+
+updateTime();
+</script>
+</body>
+</html>
